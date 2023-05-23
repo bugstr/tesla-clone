@@ -42,9 +42,6 @@ function App() {
   return (
     <div className="app">
       <Router>
-        {/* <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} /> */}
-        {/* <HeaderBlock /> */}
-        {/* {isMenuOpen && <Menu />} */}
         <Routes>
           <Route
             path="/"
