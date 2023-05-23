@@ -1,16 +1,27 @@
 import React from "react";
 import "./TeslaAccount.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import { useSelector } from "react-redux";
-import { selectUser } from "../features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../features/userSlice";
 import Car from "./Car";
+import { auth } from "../firebase";
 
 function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const logoutOfApp = () => {};
+  const logoutOfApp = () => {
+    auth
+      .signOut()
+      .then(() => {
+        dispatch(logout());
+        navigate("/");
+      })
+      .catch((error) => alert(error.message));
+  };
 
   return (
     <div className="teslaAccount">
@@ -32,12 +43,16 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
           <Link to="/teslaaccount">Solar Panels</Link>
           <Link to="/teslaaccount">Shop</Link>
           <Link to="/teslaaccount">Tesla Account</Link>
-          <Link onclick={logoutOfApp}>Logout</Link>
+          <Link onClick={logoutOfApp}>Logout</Link>
           <div
             className="teslaAccount__menu"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <CloseIcon className="teslaAccount__closeMenu" /> : <MenuIcon />}
+            {isMenuOpen ? (
+              <CloseIcon className="teslaAccount__closeMenu" />
+            ) : (
+              <MenuIcon />
+            )}
           </div>
         </div>
       </div>
@@ -61,7 +76,6 @@ function TeslaAccount({ isMenuOpen, setIsMenuOpen }) {
         <Car
           imgSrc="https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx@2x.jpg?20170815"
           model="model x"
-          
         />
       </div>
     </div>

@@ -56,13 +56,7 @@ function App() {
 
           <Route
             path="/login"
-            element={
-              user ? (
-                <Navigate to="/teslaaccount" />
-              ) : (
-                <Route path="/login" element={<Login />}></Route>
-              )
-            }
+            element={user ? <Navigate to="/teslaaccount" /> : <Login />}
           ></Route>
 
           <Route path="/signup" element={<Signup />}></Route>
@@ -73,18 +67,13 @@ function App() {
               !user ? (
                 <Navigate to="/login" />
               ) : (
-                <Route
-                  path="/teslaaccount"
-                  element={
-                    <>
-                      <TeslaAccount
-                        isMenuOpen={isMenuOpen}
-                        setIsMenuOpen={setIsMenuOpen}
-                      />
-                      {isMenuOpen && <Menu />}
-                    </>
-                  }
-                ></Route>
+                <>
+                  <TeslaAccount
+                    isMenuOpen={isMenuOpen}
+                    setIsMenuOpen={setIsMenuOpen}
+                  />
+                  {isMenuOpen && <Menu />}
+                </>
               )
             }
           ></Route>
