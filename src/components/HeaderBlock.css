@@ -91,12 +91,15 @@
   .headerBlock {
     overflow: hidden;
   }
-  html,
+  html {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
   body {
     width: 100%;
+    overflow: auto;
     height: 100%;
-    overflow-x: hidden;
-    overscroll-behavior: none;
   }
   .headerBlock__info {
     width: 100%;
