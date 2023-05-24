@@ -130,5 +130,7 @@
   .signup__header {
     position: relative;
   }
-  
+  html {
+    overscroll-behavior: none;
+  }
 }
