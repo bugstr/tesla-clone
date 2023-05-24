@@ -94,8 +94,9 @@
   html,
   body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
+    overscroll-behavior: none;
   }
   .headerBlock__info {
     width: 100%;
