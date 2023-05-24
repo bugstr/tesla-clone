@@ -74,5 +74,6 @@
   }
   .header__right > a {
     font-size: 12px;
+    text-align: center;
   }
 }

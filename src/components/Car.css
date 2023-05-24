@@ -1,4 +1,4 @@
-.car { 
+.car {
   display: grid;
   place-items: center;
   border-top: 1px solid #d0d1d2;
@@ -37,11 +37,10 @@
   color: #393c41;
 }
 
-.car__footer > span { 
+.car__footer > span {
   color: #3e6be2;
   cursor: pointer;
 }
-
 
 /*
 
@@ -73,5 +72,4 @@
   .car__footer {
     font-size: 12px;
   }
-  
 }
