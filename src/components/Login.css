@@ -23,7 +23,7 @@
 .login__language {
   display: flex;
   gap: 5px;
-  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 50px;
@@ -97,4 +97,33 @@
 .login__divider > span {
   font-weight: 600;
   color: #5c5e62;
+}
+
+/*
+
+  MEDIA QUERY
+
+*/
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .login__logo > a > img {
+    width: 75px;
+  }
+  .login__info {
+    min-width: 250px;
+  }
+  .login__info > h1 {
+    font-size: 30px;
+    margin-left: 0;
+  }
+  .login__divider {
+    margin-bottom: 0px;
+  }
+  .login__header {
+    position: relative;
+  }
+   
+
+
 }

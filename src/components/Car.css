@@ -41,3 +41,37 @@
   color: #3e6be2;
   cursor: pointer;
 }
+
+
+/*
+
+  MEDIA QUERY
+
+*/
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .car__image > img {
+    max-width: 320px;
+  }
+  .car__model {
+    font-size: 16px;
+    padding-top: 80px;
+  }
+  .car__actions > button {
+    max-width: 100px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 20px;
+  }
+  .car__actions {
+    margin-top: -30px;
+  }
+  .car__footer {
+    font-size: 12px;
+  }
+  
+}

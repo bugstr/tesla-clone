@@ -79,3 +79,39 @@
   color: black;
   opacity: 0.8;
 }
+
+/*
+
+  MEDIA QUERY
+
+*/
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .headerBlock {
+    overflow: hidden;
+  }
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .headerBlock__info {
+    width: 100%;
+    max-width: 300px;
+  }
+  .headerBlock__info--text > h1 {
+    font-size: 24px;
+  }
+  .headerBlock__info--text > h4 {
+    font-size: 14px;
+  }
+  .headerBlock__actions {
+    margin-top: 10px;
+  }
+  .headerBlock__actions > button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 12px;
+  }
+}

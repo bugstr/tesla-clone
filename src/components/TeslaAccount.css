@@ -80,3 +80,33 @@
   gap: 30px;
   padding-bottom: 40px;
 }
+
+/*
+
+  MEDIA QUERY
+
+*/
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .teslaAccount__logo > a > img {
+    width: 70px;
+  }
+  .teslaAccount__links {
+    display: none;
+  }
+  .teslaAccount__info {
+    padding: 10px 20px;
+    justify-content: space-around;
+  }
+  .teslaAccount__person > h4 {
+    font-size: 16px;
+  }
+  .teslaAccount__infoRight {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .teslaAccount__car {
+
+  }
+}

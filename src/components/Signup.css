@@ -23,7 +23,7 @@
 .signup__language {
   display: flex;
   gap: 5px;
-  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 50px;
@@ -101,4 +101,34 @@
 
 .signup__info > a > button {
   margin-bottom: 80px;
+}
+
+/*
+
+  MEDIA QUERY
+
+*/
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .signup {
+    gap: 50px;
+  }
+  .signup__logo > a > img {
+    width: 75px;
+  }
+  .signup__info {
+    min-width: 250px;
+  }
+  .signup__info > h1 {
+    font-size: 30px;
+    margin-left: 0;
+  }
+  .signup__divider {
+    margin-bottom: 0px;
+  }
+  .signup__header {
+    position: relative;
+  }
+  
 }
